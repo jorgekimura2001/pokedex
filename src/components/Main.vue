@@ -12,8 +12,11 @@
             </form>
         </div>
         <div class="list-container">
-            <ul>
-
+            <ul v-for='item in pokemon' v-bind:key='item.id' >
+                <li> 
+                    <img :src='item.sprites.front_default' :alt='item.name'/>
+                    <span>{{ item.name}}</span>
+                </li>
             </ul>
         </div>
     </div>
@@ -27,7 +30,8 @@ export default {
     },
     data () {
         return {
-            name_pokemon: null
+            name_pokemon: null,
+            pokemon: []
         }
     },
     methods: {
@@ -37,9 +41,12 @@ export default {
             const pokemon = this.name_pokemon.trim().toLowerCase()
             const req = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
             const data = await req.json()
-            console.log(data)
-
-            console.log(typeof this.name_pokemon)
+            const {id, name, sprites} = data
+            this.pokemon = [{
+                id,
+                name, 
+                sprites
+            }]
         },
     },
 }
