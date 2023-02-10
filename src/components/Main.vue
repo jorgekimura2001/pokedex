@@ -6,7 +6,7 @@
         <div class="form-container">
             <form @submit="getPokemon">
                 <div class="search-container">
-                    <input type="text" v-model="name_pokemon" placeholder="Faça sua pesquisa">
+                    <input type="text" v-model="name_pokemon" placeholder="Digite o nome do pokemon">
                     <button class="btn-search"><img src="../assets/search.svg" alt=""></button>
                 </div>
             </form>
