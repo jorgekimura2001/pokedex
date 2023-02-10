@@ -30,5 +30,7 @@ export default {
     .header img{
         width: 3.125rem;
         height: 3.125rem;
+        border: 1px solid black;
+        border-radius: 100%;
     }
 </style>

@@ -5,15 +5,15 @@
         </div>
         <div class="form-container">
             <form @submit="getPokemon">
-                <div>
+                <div class="search-container">
                     <input type="text" v-model="name_pokemon" placeholder="Faça sua pesquisa">
-                    <button>Pesquisar</button>
+                    <button class="btn-search"><img src="../assets/search.svg" alt=""></button>
                 </div>
             </form>
         </div>
         <div class="list-container">
             <ul v-for='item in pokemon' v-bind:key='item.id'>
-                <li> 
+                <li class="item-list-principal"> 
                     <img :src='item.sprites.front_default' :alt='item.name'/>
                     <span>{{item.name}}</span>
                 </li>
@@ -90,5 +90,104 @@ export default {
 </script>
 
 <style scoped>
-    
+    .main{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 90vh;
+    }
+
+    .title-container{
+        width: 70%;
+        margin-bottom: 50px;
+    }
+    .title-container h1{
+        font-size: 1.875rem;
+        color: #E83838;
+    }
+
+    .form-container{
+        width: 70%;
+    }
+    form{
+        width: 100%;
+    }
+    .search-container{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 30px;
+    }
+    .search-container input{
+        padding-left: 15px;
+        border: 1px solid #0066ff;
+        border-radius: 15px 0 0 15px;
+        width: 80%;
+        height: 100%;
+    }
+    .search-container input:focus{
+        border: 0.0938rem solid #071780;
+        outline: none;
+    }
+    .btn-search{
+        border: 1px solid #0066ff;
+        height: 100%;
+        border-radius: 0 15px 15px 0;
+        width: 20%;
+        background: #3192dc;
+        transition: .5s;
+    }
+    .btn-search img{
+        width: 1.125rem;
+        height: 1.125rem;
+    }
+    .btn-search:hover{
+        border: 0.0938rem solid #071780;
+        cursor: pointer;
+    }
+
+    .list-container{
+        width: 70%;
+        margin-top: 50px;
+    }
+
+    .list-container ul{
+        
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        overflow-x: auto;
+        height: 300px;
+    }
+
+    .list-container li{
+        margin-left: 20px;
+        min-width: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        box-shadow: 0px 2px 8px #0066ff;
+        height: 250px;
+        padding: 10px;
+    }
+
+    .list-container li:last-child{
+        margin-right: 20px;
+    }
+    .list-container li img{
+        width: 8.125rem;
+    }
+
+    .list-container li:hover{
+        transform: scale(1.1);
+        transition: all 0.7s ease 0s;
+    }
+
+
+
 </style>
