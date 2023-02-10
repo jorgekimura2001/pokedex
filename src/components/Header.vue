@@ -1,7 +1,9 @@
 <template>
-    <header>
-        <h1>PokeDex</h1>
-    </header>
+    <div class="header">
+        <header>
+            <h1>PokeDex</h1>
+        </header>
+    </div>
 </template>
 
 <script>
@@ -10,6 +12,6 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>

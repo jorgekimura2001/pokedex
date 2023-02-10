@@ -1,17 +1,18 @@
 <template>
   <Header />
-  <Pokedex msg="Welcome to Your Vue.js App"/>
+  
+  <Main message='Bem vindo ao Pokedex, sua plataforma para pesquisar pokemons!'/>
 </template>
 
 <script>
-import Pokedex from './components/Pokedex.vue'
 import Header from './components/Header.vue'
+import Main from './components/Main.vue'
 
 export default {
   name: 'App',
   components: {
-    Pokedex,
-    Header
+    Header,
+    Main
 }
 }
 </script>
