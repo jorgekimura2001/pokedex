@@ -1,18 +1,20 @@
 <template>
-  <Header />
-  
+  <Header/>
   <Main message='Bem vindo ao Pokedex, sua plataforma para pesquisar pokemons!'/>
+  <Footer dev='Jorge Kimura'/>
 </template>
 
 <script>
 import Header from './components/Header.vue'
 import Main from './components/Main.vue'
+import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
   components: {
     Header,
-    Main
+    Main,
+    Footer
   },
 }
 </script>
