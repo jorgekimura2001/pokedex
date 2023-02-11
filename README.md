@@ -4,7 +4,7 @@ Aplicação simples, onde o usuário digita o nome do pokemon que quer buscar. A
 
 ## **Link da aplicação (deploy):**
 ```
-
+https://pokedex-three-swart.vercel.app/
 ```
 
 Para inciar este projeto, é necessário instalar as dependências, que foram utilizadas na elaboração do projeto. Portanto utilize o comando abaixo para instalar tais dependências:
